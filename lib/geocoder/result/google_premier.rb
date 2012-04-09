@@ -1,4 +1,4 @@
-require 'geocoder/results/google'
+require 'geocoder/result/google'
 
 module Geocoder::Result
   class GooglePremier < Google

@@ -1,4 +1,4 @@
-require 'geocoder/models/base'
+require 'geocoder/model/base'
 
 module Geocoder
   module Model

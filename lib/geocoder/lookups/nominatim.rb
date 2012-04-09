@@ -1,5 +1,5 @@
 require 'geocoder/lookups/base'
-require "geocoder/results/nominatim"
+require "geocoder/result/nominatim"
 
 module Geocoder::Lookup
   class Nominatim < Base

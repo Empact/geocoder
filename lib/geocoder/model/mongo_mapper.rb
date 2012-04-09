@@ -1,9 +1,9 @@
-require 'geocoder/models/base'
-require 'geocoder/models/mongo_base'
+require 'geocoder/model/base'
+require 'geocoder/model/mongo_base'
 
 module Geocoder
   module Model
-    module Mongoid
+    module MongoMapper
       include Base
       include MongoBase
 
@@ -11,12 +11,12 @@ module Geocoder
 
       private # --------------------------------------------------------------
 
-      def geocoder_file_name;   "mongoid"; end
-      def geocoder_module_name; "Mongoid"; end
+      def geocoder_file_name;   "mongo_mapper"; end
+      def geocoder_module_name; "MongoMapper"; end
 
       def geocoder_init(options)
         super(options)
-        index [[ geocoder_options[:coordinates], Mongo::GEO2D ]],
+        ensure_index [[ geocoder_options[:coordinates], Mongo::GEO2D ]],
           :min => -180, :max => 180 # create 2d index
       end
     end

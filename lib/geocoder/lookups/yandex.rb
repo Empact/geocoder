@@ -1,5 +1,5 @@
 require 'geocoder/lookups/base'
-require "geocoder/results/yandex"
+require "geocoder/result/yandex"
 
 module Geocoder::Lookup
   class Yandex < Base

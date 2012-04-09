@@ -1,4 +1,4 @@
-require 'geocoder/results/base'
+require 'geocoder/result/base'
 
 module Geocoder::Result
   class Yahoo < Base

@@ -1,5 +1,5 @@
 require 'geocoder/lookups/base'
-require "geocoder/results/bing"
+require "geocoder/result/bing"
 
 module Geocoder::Lookup
   class Bing < Base

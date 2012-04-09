@@ -1,5 +1,5 @@
 require 'geocoder/lookups/base'
-require "geocoder/results/yahoo"
+require "geocoder/result/yahoo"
 
 module Geocoder::Lookup
   class Yahoo < Base

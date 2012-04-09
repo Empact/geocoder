@@ -1,5 +1,5 @@
 require 'geocoder'
-require 'geocoder/models/active_record'
+require 'geocoder/model/active_record'
 
 module Geocoder
   if defined? Rails::Railtie

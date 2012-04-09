@@ -3,11 +3,34 @@ require "geocoder/calculations"
 require "geocoder/exceptions"
 require "geocoder/cache"
 require "geocoder/request"
-require "geocoder/models/active_record" if defined?(::ActiveRecord)
-require "geocoder/models/mongoid" if defined?(::Mongoid)
-require "geocoder/models/mongo_mapper" if defined?(::MongoMapper)
 
 module Geocoder
+  if defined?(ActiveSupport)
+    require 'active_support/dependencies/autoload'
+
+    module Result
+      extend ActiveSupport::Autoload
+
+      autoload :Base
+      autoload :Bing
+      autoload :Freegeoip
+      autoload :GeocoderCa
+      autoload :Google
+      autoload :GooglePremier
+      autoload :Nominatim
+      autoload :Yahoo
+      autoload :Yandex
+    end
+
+    module Model
+      extend ActiveSupport::Autoload
+
+      autoload :Mongoid
+      autoload :MongoMapper
+      autoload :ActiveRecord
+    end
+  end
+
   extend self
 
   ##

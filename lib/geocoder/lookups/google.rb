@@ -1,5 +1,5 @@
 require 'geocoder/lookups/base'
-require "geocoder/results/google"
+require "geocoder/result/google"
 
 module Geocoder::Lookup
   class Google < Base

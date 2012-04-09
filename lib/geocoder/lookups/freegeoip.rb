@@ -1,5 +1,5 @@
 require 'geocoder/lookups/base'
-require 'geocoder/results/freegeoip'
+require 'geocoder/result/freegeoip'
 
 module Geocoder::Lookup
   class Freegeoip < Base
